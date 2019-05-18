@@ -6,6 +6,9 @@
   "repository": "git@gitlab.com:SoggyPiggy/freelancer-core.git",
   "author": "SoggyPiggy <soggypiggy@gmail.com>",
   "private": true,
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
