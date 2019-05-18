@@ -1,0 +1,9 @@
+{
+  "name": "freelancer-core",
+  "version": "1.0.0",
+  "description": "The core serves the purpose of exposing the core classes needed for other the systems.",
+  "main": "index.js",
+  "repository": "git@gitlab.com:SoggyPiggy/freelancer-core.git",
+  "author": "SoggyPiggy <soggypiggy@gmail.com>",
+  "private": true
+}
