@@ -2,8 +2,7 @@ const Entity = require('./Entity');
 
 class Location extends Entity {
   constructor(data = {}) {
-    super(data);
-    Object.assign(this, {
+    super({
       x: 0,
       y: 0,
       ...data,

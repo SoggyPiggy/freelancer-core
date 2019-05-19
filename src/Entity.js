@@ -1,6 +1,8 @@
-class Entity {
+const Base = require('./Base');
+
+class Entity extends Base {
   constructor(data) {
-    Object.assign(this, {
+    super({
       id: null,
       name: null,
       level: null,
