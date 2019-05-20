@@ -1,29 +1,13 @@
 const random = require('./utils/random');
 
 class Base {
-  constructor(data = {}) {
+  constructor() {
     this._ = {};
-    this._.keys = Object.keys(data);
     this._.random = random;
-    Object.assign(this, data);
-  }
-
-  compress() {
-    const data = {};
-    this._.keys.forEach((key) => {
-      const item = this[key];
-      if (item instanceof Base) data[key] = item.compress();
-      else data[key] = item;
-    });
-    return data;
-  }
-
-  toJSON(...args) {
-    return JSON.stringify(this.compress(), ...args);
-  }
-
-  toString() {
-    return JSON.stringify(this.compress, null, 2);
+    this._.property = (dataValue, defaultValue, Type = null) => {
+      if (!Type) return typeof dataValue !== 'undefined' ? dataValue : defaultValue;
+      return new Type(typeof dataValue !== 'undefined' ? dataValue : defaultValue);
+    };
   }
 }
 
