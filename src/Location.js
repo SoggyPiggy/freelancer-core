@@ -1,12 +1,13 @@
-const Entity = require('./Entity');
+const Base = require('./Base');
 
-class Location extends Entity {
+class Location extends Base {
   constructor(data = {}) {
-    super({
-      x: 0,
-      y: 0,
-      ...data,
-    });
+    super();
+    this.id = this._.property(data.id, null);
+    this.name = this._.property(data.name, null);
+    this.examine = this._.property(data.examine, null);
+    this.x = this._.property(data.x, 0);
+    this.y = this._.property(data.y, 0);
   }
 
   distance(target) {
