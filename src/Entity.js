@@ -5,7 +5,6 @@ class Entity extends Base {
     super({
       id: null,
       name: null,
-      level: null,
       examine: null,
       ...data,
     });
