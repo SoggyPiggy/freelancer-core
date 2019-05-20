@@ -4,9 +4,11 @@ class Base {
   constructor() {
     this._ = {};
     this._.random = random;
-    this._.property = (dataValue, defaultValue, Type = null) => {
-      if (!Type) return typeof dataValue !== 'undefined' ? dataValue : defaultValue;
-      return new Type(typeof dataValue !== 'undefined' ? dataValue : defaultValue);
+    this._.property = (data, defaultValue, Type = null, isArray = false) => {
+      const value = typeof data !== 'undefined' ? data : defaultValue;
+      if (!Type) return value;
+      if (!isArray) return new Type(value);
+      return value.map(item => new Type(item));
     };
   }
 }
