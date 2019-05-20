@@ -1,8 +1,8 @@
 class Base {
-  constructor(options = {}) {
+  constructor(data = {}) {
     this._ = {};
-    this._.keys = Object.keys(options);
-    Object.assign(this, options);
+    this._.keys = Object.keys(data);
+    Object.assign(this, data);
   }
 
   compress() {
