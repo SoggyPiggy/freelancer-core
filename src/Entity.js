@@ -10,6 +10,10 @@ class Entity extends Base {
       ...data,
     });
   }
+
+  toString() {
+    return this.name;
+  }
 }
 
 module.exports = Entity;
