@@ -1,7 +1,10 @@
+const random = require('./utils/random');
+
 class Base {
   constructor(data = {}) {
     this._ = {};
     this._.keys = Object.keys(data);
+    this._.random = random;
     Object.assign(this, data);
   }
 
