@@ -1,5 +1,5 @@
-const { Random, browserCrypto } = require('random-js');
+const { Random, nodeCrypto } = require('random-js');
 
-const random = new Random(browserCrypto);
+const random = new Random(nodeCrypto);
 
 module.exports = random;
