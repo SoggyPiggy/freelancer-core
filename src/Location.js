@@ -15,7 +15,9 @@ class Location extends Base {
   }
 
   static distance(a, b) {
-    return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
+    const x = Math.abs(a.x - b.x);
+    const y = Math.abs(a.y - b.y);
+    return Math.round(Math.max(x, y) + (Math.min(x, y) * 0.4142135623730951));
   }
 }
 
