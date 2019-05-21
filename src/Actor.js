@@ -6,6 +6,7 @@ class Actor extends Base {
     this.id = this._.property(data.id, null);
     this.name = this._.property(data.name, null);
     this.examine = this._.property(data.examine, null);
+    this.quests = this._.property(data.quests, []);
   }
 }
 
