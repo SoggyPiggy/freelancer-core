@@ -5,18 +5,18 @@ class Item extends Base {
   constructor(data = {}) {
     super();
     // Internal Values
-    this.id = this._.property(data.id, null);
+    this.id = this._.property(data.id);
 
     // Basic Information
-    this.name = this._.property(data.name, null);
-    this.examine = this._.property(data.examine, null);
-    this.value = this._.property(data.value, 0);
+    this.name = this._.property(data.name);
+    this.examine = this._.property(data.examine);
+    this.value = this._.property(data.value);
 
     // Armor / Stat Boosts
-    this.slot = this._.property(data.slot, null);
-    this.armor = this._.property(data.armor, null);
-    this.damage = this._.property(data.damage, null);
-    this.speed = this._.property(data.speed, null);
+    this.slot = this._.property(data.slot);
+    this.armor = this._.property(data.armor);
+    this.damage = this._.property(data.damage);
+    this.speed = this._.property(data.speed);
 
     // Other
     this.recipes = this._.property(data.recipes, [], Requirements, true);
