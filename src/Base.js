@@ -4,7 +4,7 @@ class Base {
   constructor() {
     this._ = {};
     this._.random = random;
-    this._.property = (data, defaultValue, Type = null, isArray = false) => {
+    this._.property = (data, defaultValue = null, Type = null, isArray = false) => {
       const value = typeof data !== 'undefined' ? data : defaultValue;
       if (!Type) return value;
       if (!isArray) return new Type(value);
