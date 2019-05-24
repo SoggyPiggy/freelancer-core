@@ -9,6 +9,7 @@ class Item extends Base {
 
     // Basic Information
     this.name = this._.property(data.name);
+    this.level = this._.property(data.level);
     this.examine = this._.property(data.examine);
     this.value = this._.property(data.value);
 
