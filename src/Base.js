@@ -1,6 +1,6 @@
 const random = require('./utils/random');
 
-class Base {
+module.exports = class Base {
   constructor() {
     this._ = {};
     this._.random = random;
@@ -11,6 +11,4 @@ class Base {
       return value.map(item => new Type(item));
     };
   }
-}
-
-module.exports = Base;
+};

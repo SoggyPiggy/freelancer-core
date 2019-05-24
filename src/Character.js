@@ -1,6 +1,6 @@
 const Base = require('./Base');
 
-class Character extends Base {
+module.exports = class Character extends Base {
   constructor(data = {}) {
     super(data);
     this.id = this._.property(data.id);
@@ -8,6 +8,4 @@ class Character extends Base {
     this.examine = this._.property(data.examine);
     this.quests = this._.property(data.quests, []);
   }
-}
-
-module.exports = Character;
+};

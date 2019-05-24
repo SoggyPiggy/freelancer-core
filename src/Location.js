@@ -1,6 +1,6 @@
 const Base = require('./Base');
 
-class Location extends Base {
+module.exports = class Location extends Base {
   constructor(data = {}) {
     super();
     this.id = this._.property(data.id);
@@ -19,6 +19,4 @@ class Location extends Base {
     const y = Math.abs(a.y - b.y);
     return Math.round(Math.max(x, y) + (Math.min(x, y) * 0.4142135623730951));
   }
-}
-
-module.exports = Location;
+};

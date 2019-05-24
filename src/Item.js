@@ -1,7 +1,7 @@
 const Base = require('./Base');
 const Requirements = require('./Requirements');
 
-class Item extends Base {
+module.exports = class Item extends Base {
   constructor(data = {}) {
     super();
     // Internal Values
@@ -23,6 +23,4 @@ class Item extends Base {
     this.recipes = this._.property(data.recipes, [], Requirements, true);
     this.equip = this._.property(data.equip, {}, Requirements);
   }
-}
-
-module.exports = Item;
+};
