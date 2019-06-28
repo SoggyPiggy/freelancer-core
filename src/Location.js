@@ -5,7 +5,7 @@ module.exports = class Location extends Base {
     super();
     this.id = this._.property(data.id);
     this.name = this._.property(data.name);
-    this.examine = this._.property(data.examine);
+    this.description = this._.property(data.description);
     this.x = this._.property(data.x, 0);
     this.y = this._.property(data.y, 0);
   }
