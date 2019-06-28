@@ -3,14 +3,14 @@ module.exports = function definePropertyOnObjectFromDataSource(
   obj,
   data,
   id,
+  initial = null,
   {
-    value = null,
     Type = null,
     isArray = false,
   },
 ) {
-  const v = typeof data[id] !== 'undefined' ? data[id] : value;
-  if (isArray && Type) obj[id] = v.map(item => new Type(item));
-  else if (Type) obj[id] = new Type(v);
-  else obj[id] = v;
+  const value = typeof data[id] !== 'undefined' ? data[id] : initial;
+  if (isArray && Type) obj[id] = value.map(item => new Type(item));
+  else if (Type) obj[id] = new Type(value);
+  else obj[id] = value;
 };
