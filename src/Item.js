@@ -3,24 +3,24 @@ const Requirements = require('./Requirements');
 
 module.exports = class Item extends Base {
   constructor(data = {}) {
-    super();
+    super(data);
     // Internal Values
-    this.id = this._.property(data.id);
+    this._.define('id');
 
     // Basic Information
-    this.name = this._.property(data.name);
-    this.level = this._.property(data.level);
-    this.description = this._.property(data.description);
-    this.value = this._.property(data.value);
+    this._.define('name');
+    this._.define('level');
+    this._.define('description');
+    this._.define('value');
 
     // Armor / Stat Boosts
-    this.slot = this._.property(data.slot);
-    this.armor = this._.property(data.armor);
-    this.damage = this._.property(data.damage);
-    this.speed = this._.property(data.speed);
+    this._.define('slot');
+    this._.define('armor');
+    this._.define('damage');
+    this._.define('speed');
 
     // Other
-    this.recipes = this._.property(data.recipes, [], Requirements, true);
-    this.equip = this._.property(data.equip, {}, Requirements);
+    this._.define('recipes', [], { Type: Requirements, isArray: true });
+    this._.define('equip', [], { Type: Requirements });
   }
 };

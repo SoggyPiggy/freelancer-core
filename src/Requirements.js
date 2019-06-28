@@ -2,9 +2,9 @@ const Base = require('./Base');
 
 module.exports = class Requirements extends Base {
   constructor(data = {}) {
-    super();
-    this.level = this._.property(data.level, 0);
-    this.quests = this._.property(data.quests, []);
-    this.items = this._.property(data.items, []);
+    super(data);
+    this._.define('level', 0);
+    this._.define('quests', []);
+    this._.define('items', []);
   }
 };
